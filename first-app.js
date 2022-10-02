@@ -1,37 +1,41 @@
+//////////task-8
 
 const http = require("http");
-const fs = require('fs');
+const fs = require("fs");
 
 const server = http.createServer((req, res) => {
-    const method = req.method;
-    const url = req.url;
-    if (url === '/') {
-        res.setHeader("Content-Type", "text/html");
-        res.write('<html>');
-        res.write('<head><title>My First Page</title></head>');
-        res.write('<body><form action="/message" method="POST" ><input type="text" name="message" ><button>Submit</button></form></body>');
-        res.write('</html>');
-        res.end;
-    }
-    if (url === "/message" && method=="POST") {
+  const method = req.method;
+  const url = req.url;
+  if (url === "/") {
+    fs.readFile("message.txt", { encoding: "utf-8" }, (err, data) => {
+      res.setHeader("Content-Type", "text/html");
+      res.write("<html>");
+      res.write("<head><title>My First Page</title></head>");
+      res.write(`<body> ${data} </body>`);
+      res.write(
+        '<body><form action="/message" method="POST" ><input type="text" name="message" ><button>Submit</button></form></body>'
+      );
+      res.write("</html>");
+      return res.end();
+    });
+  }
+  if (url === "/message" && method == "POST") {
+    const body = [];
 
-        const body =[];
-
-        req.on('data',(chunk)=>{
-            body.push(chunk);
-        })
-        return req.on('end' , ()=>{
-            const parsedBody = Buffer.concat(body).toString();
-            console.log(parsedBody);
-            const message = parsedBody.split('=')[1];
-            fs.writeFile('message.txt' , message , err=> {
-                res.statusCode= 302 ;
-                res.setHeader('Location' , '/')
-                res.end();
-            });
-        })
-    }
-
+    req.on("data", (chunk) => {
+      body.push(chunk);
+    });
+    return req.on("end", () => {
+      const parsedBody = Buffer.concat(body).toString();
+      console.log(parsedBody);
+      const message = parsedBody.split("=")[1];
+      fs.writeFile("message.txt", message, (err) => {
+        res.statusCode = 302;
+        res.setHeader("Location", "/");
+        return res.end();
+      });
+    });
+  }
 });
 
 server.listen(4000);
