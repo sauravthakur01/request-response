@@ -1,0 +1,24 @@
+{
+  "name": "hello_world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "first-app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon first-app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sauravthakur01/request-response.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sauravthakur01/request-response/issues"
+  },
+  "homepage": "https://github.com/sauravthakur01/request-response#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
