@@ -34,5 +34,15 @@ const routsHandeler = (req,res)=>{
       });
     }
 }
+// module.exports = routsHandeler;
 
-module.exports = routsHandeler;
+// module.exports = {
+//     handler:routsHandeler,
+//     text:'some text' 
+// }
+
+// module.exports.handler = routsHandeler ;
+// module.exports.text = 'some text'
+
+ exports.handler = routsHandeler ;
+ exports.text = 'some text' ; 
