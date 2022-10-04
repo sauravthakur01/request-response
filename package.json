@@ -20,5 +20,8 @@
   "homepage": "https://github.com/sauravthakur01/request-response#readme",
   "devDependencies": {
     "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
   }
 }
