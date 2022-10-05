@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(255, 211, 129);
+    margin: 0;
+    padding: 0;
+  }
+.navbar{
+    display:flex;
+    justify-content: center;
+    background-color: orangered;
+    margin-bottom: 8px;
+  }
+  .list{
+    font-size: 1.1rem;
+    text-decoration: none;
+    color:black;
+    margin:8px;
+  }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css">
+   
+  </head>
+  <body>
+    <nav class="navbar">
+      <a class="list"  href="/admin/add-product">add-product</a>
+      <a class="list" href="/shop/">shop</a>  
+    </nav>
+    <div class="main">
+      <h2>Book a Call</h2>
+      <h3>Book a call slot and our representative will call you</h3>
+
+      <hr />
+      <form action="/contactus" method="POST" >
+        <label for="fname">Name:</label><br />
+        <input type="text" id="fname" name="name" class="area" required /><br />
+        <label for="mail">Email:</label><br />
+        <input type="email" id="mail" name="mail" class="area" required /><br />
+        <br />
+        <input type="submit" class="sub" value="GET A CALL" />
+      </form>
+    </div>
+  </body>
+</html>

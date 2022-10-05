@@ -1,0 +1,61 @@
+body {
+    background-color: rgb(255, 211, 129);
+    margin: 0;
+    padding: 0;
+  }
+  hr {
+    width: 97%;
+    border-style: solid;
+  }
+
+  .main {
+    margin-top: 5px;
+    background-color: white;
+    border: 1.5px solid orange;
+    border-radius: 4px;
+    width: 60%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h2 {
+    color: orange;
+  }
+
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  form {
+    padding: 10px;
+  }
+
+  .area {
+    width: 97%;
+    margin-bottom: 13px;
+    height: 21px;
+  }
+
+  .sub {
+    background-color: orange;
+    width: 98%;
+    margin-top: 9px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 9px;
+  }
+  .navbar{
+    display:flex;
+    justify-content: center;
+    background-color: orangered;
+    margin-bottom: 8px;
+  }
+  .list{
+    font-size: 1.1rem;
+    text-decoration: none;
+    color:black;
+    margin:8px;
+  }
